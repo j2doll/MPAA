@@ -39,7 +39,8 @@ import matplotlib
 matplotlib.rc('font', family='Malgun Gothic',size=8, weight = 'bold')
 
 # 파일 = pd.ExcelFile('N:\투자시뮬\통합 포트엑셀1.xlsx')
-파일 = pd.ExcelFile(r'D:\workspace\github\MPAA\MPAA-data.xlsx')
+엑셀파일_경로 = r'D:\workspace\github\MPAA\MPAA-data.xlsx'
+파일 = pd.ExcelFile(엑셀파일_경로)
 자산군 = 파일.sheet_names
 자산군
 
