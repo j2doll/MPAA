@@ -1,4 +1,4 @@
-
+#-*- coding: utf-8 -*-
 # coding: utf-8
 
 # ### Modified PAA model by Scott Lee, systrader79
@@ -137,10 +137,10 @@ def 수익곡선모멘텀(국가비중,섹터비중,팩터비중,채권비중):
 # 국가, 섹터, 팩터, 채권
 
 a = 수익곡선모멘텀(1,1,1,3)
-b = 자료['국가'].KOSPI/자료['국가'].KOSPI.ix[0]
+b = 자료['국가'].KOSPI/자료['국가'].KOSPI.iloc[0] # b = 자료['국가'].KOSPI/자료['국가'].KOSPI.ix[0] # old pandas 10.0
 c = pd.concat([a, b], axis=1).dropna()
 c.columns = ['포트폴리오', '코스피']
-c.divide(c.ix[0]).plot(figsize = (18,12))
+c.divide(c.iloc[0]).plot(figsize = (18,12)) # c.divide(c.ix[0]).plot(figsize = (18,12)) # old pandas
 plt.show()
 
 #5. MDD
